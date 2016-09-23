@@ -45,9 +45,6 @@ dependencies:
   sinopia-htpasswd: '>= 0.4.3'
   http-errors: '>=1.2.0'
 
-  # node 0.10 compatibility, should go away soon
-  readable-stream: '~1.1.0'
-
 optionalDependencies:
   # those are native modules that could fail to compile
   # and unavailable on windows
@@ -120,10 +117,8 @@ scripts:
       require("fs").writeFileSync("./npm-shrinkwrap.json", x + "\n")
     '
 
-# we depend on streams2 stuff
-# it can be replaced with isaacs/readable-stream, ask if you need to use 0.8
 engines:
-  node: '>=0.10'
+  node: '>=4.5'
 
 preferGlobal: true
 
